@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        body {
+            background: rgb(59, 59, 206);
+            color:aliceblue;
+            font: 14pt Tahoma;
+        }
+        button.remover {
+            position: absolute;
+            right: 100px;
+        }
+        ul li.naoRealizada {
+            list-style-type: '☐';
+            cursor: pointer;
+            text-indent: 10px;
+        }
+        ul li.realizada {
+            list-style-type: '☑';
+            cursor: pointer;
+            text-indent: 10px;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+
+    <div>
+        <input type="text" id="caixaDeTexto" placeholder="Tarefa">
+        <button id="botaoAdicionar" class="adicionar">✚</button>
+
+        <select id="listaSuspensa" hidden>
+            <option>-- Selecione uma opção --</option>
+            <option>Marcar Todas as Tarefas</option>
+            <option>Desmarcar Todas as Tarefas</option>
+            <option>Limpar a Lista de Tarefas</option>
+        </select>
+    </div>
+
+    <ul id="listaTarefas">
+
+    </ul>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
